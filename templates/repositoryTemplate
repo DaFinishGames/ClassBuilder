@@ -1,0 +1,7 @@
+package com.play.performance.Play.Performance.Repository;
+
+import com.play.performance.Play.Performance.DataObjects.[ClassName];
+
+public interface [ClassName]Repository extends PlayPerformanceRepository<[ClassName], [Type]>{
+
+}

@@ -1,0 +1,26 @@
+package com.play.performance.Play.Performance.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.play.performance.Play.Performance.DataObjects.[ClassName];
+import com.play.performance.Play.Performance.Repository.[ClassName]Repository;
+
+@RestController
+public class [ClassName]Controller {
+
+	private [ClassName]Repository [classname]Repository;
+
+	@Autowired
+	public [ClassName]Controller([ClassName]Repository [classname]Repository){
+		super();
+		this.[classname]Repository = [classname]Repository;
+	}
+	
+	@GetMapping(path = "/all-[classname]s")
+	public @ResponseBody Iterable<[ClassName]> getAll[ClassName]s(){
+		return [classname]Repository.findAll();
+	}
+}

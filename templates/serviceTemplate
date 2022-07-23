@@ -1,0 +1,21 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { [ClassName] } from 'src/models/[class-name].model';
+import { BackendService } from 'src/core/services/backend.service';
+import { PlayPerformanceUtils } from 'src/core/services/play-performance-utils.service';
+import { WebserviceConstants } from 'src/core/models/constants/webservice-constants.model';
+
+
+
+@Injectable({
+  providedIn: 'root',
+})
+export class [ClassName]Service {
+
+  constructor(private backend : BackendService,
+    private utils : PlayPerformanceUtils) { }
+
+  public getAll[ClassName]() : Observable<[ClassName][]>{
+      return this.backend.httpGet(WebserviceConstants.ALL_[CLASSNAME]S);
+  }
+}
